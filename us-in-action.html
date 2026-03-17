@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View real job photos of Williams Cleaning in action across Gateshead, Newcastle, and nearby areas.">
+    <title>Us in Action - Williams Cleaning</title>
+    <link rel="icon" type="image/png" href="images-2/green-power-washer-internet-icon.png">
+    <link rel="canonical" href="https://williamswindowsandexternalcleaningservices.co.uk/us-in-action.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-green: #2ecc71;
+            --dark-green: #27ae60;
+            --light-green: #d5f4e6;
+            --text-dark: #1d1d1d;
+            --text-light: #666666;
+            --bg-white: #ffffff;
+            --bg-gray: #f5f5f5;
+            --border-color: #e5e5e5;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --section-padding: clamp(2rem, 5.5vw, 3.5rem);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+            letter-spacing: -0.2px;
+        }
+
+        img { display: block; max-width: 100%; height: auto; }
+
+        header {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.55rem clamp(0.9rem, 3.5vw, 2rem);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-menu { display: flex; align-items: center; gap: 2rem; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color var(--transition);
+        }
+
+        .nav-links a:hover,
+        .nav-links a[aria-current="page"] {
+            color: var(--primary-green);
+        }
+
+        .nav-links > li > a {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-links > li > a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -0.5rem;
+            height: 2px;
+            border-radius: 999px;
+            background-color: var(--primary-green);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition);
+        }
+
+        .nav-links > li > a:hover::before,
+        .nav-links > li > a[aria-current="page"]::before,
+        .nav-links > li > a[aria-current="location"]::before {
+            transform: scaleX(1);
+        }
+
+
+        .nav-services-item {
+            position: relative;
+        }
+
+        .nav-services-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .nav-services-link::after {
+            content: "▾";
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            transition: transform var(--transition), color var(--transition);
+        }
+
+        .nav-services-item:hover .nav-services-link::after,
+        .nav-services-item:focus-within .nav-services-link::after,
+        .nav-services-item.is-open .nav-services-link::after {
+            color: var(--primary-green);
+        }
+
+        .nav-services-item.is-open .nav-services-link::after {
+            transform: rotate(180deg);
+        }
+
+        .services-submenu {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (min-width: 901px) {
+            .nav-services-item:hover .services-submenu,
+            .nav-services-item:focus-within .services-submenu,
+            .nav-services-item.is-open .services-submenu {
+                display: grid;
+                gap: 0.1rem;
+                position: absolute;
+                top: calc(100% + 0.45rem);
+                left: 0;
+                min-width: min(300px, 74vw);
+                padding: 0.55rem 0.7rem;
+                background-color: var(--bg-white);
+                border: 1px solid var(--border-color);
+                border-radius: 14px;
+                box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+                z-index: 1100;
+            }
+
+            .services-submenu::before {
+                content: "";
+                position: absolute;
+                top: -12px;
+                left: 0;
+                right: 0;
+                height: 12px;
+            }
+
+            .services-submenu a {
+                color: var(--text-light);
+                font-size: 0.88rem;
+                padding: 0.48rem 0.5rem;
+                border-radius: 9px;
+                line-height: 1.35;
+            }
+
+            .services-submenu a:hover {
+                color: var(--primary-green);
+                background-color: #f5f8f6;
+            }
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .btn-call,
+        .btn-email,
+        .btn-whatsapp {
+            min-height: 42px;
+            padding: 0.65rem 1rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-call {
+            background-color: var(--primary-green);
+            color: #fff;
+            border: 1px solid var(--primary-green);
+        }
+
+        .btn-call:hover {
+            background-color: var(--dark-green);
+            border-color: var(--dark-green);
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: #fff;
+            border: 1px solid #25d366;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebe5b;
+            border-color: #1ebe5b;
+        }
+
+        .whatsapp-button {
+            background-color: #25d366;
+            color: #fff;
+            border: 1px solid #25d366;
+            padding: 0.7rem 1.15rem;
+            min-height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all var(--transition);
+            letter-spacing: -0.3px;
+        }
+
+        .whatsapp-button:hover {
+            border-color: #1ebe5b;
+            background-color: #1ebe5b;
+            transform: scale(1.05);
+        }
+
+        .whatsapp-button::before,
+        .btn-whatsapp::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            margin-right: 0.45rem;
+            flex-shrink: 0;
+            background: center / contain no-repeat url('images-1/whatsapp-icon.svg');
+        }
+
+        .btn-email {
+            background-color: #f59e0b;
+            color: #fff;
+            border: 1px solid #f59e0b;
+        }
+
+        .btn-email:hover {
+            border-color: #d97706;
+            background-color: #d97706;
+        }
+
+        .btn-quote {
+            background-color: #2563eb;
+            border-color: #2563eb;
+            color: #fff;
+        }
+
+        .btn-quote:hover {
+            background-color: #1d4ed8;
+            border-color: #1d4ed8;
+            color: #fff;
+        }
+
+        .nav-actions a {
+            min-height: clamp(34px, 3.1vw, 42px);
+            font-size: clamp(0.8rem, 0.74rem + 0.22vw, 0.95rem);
+            padding-block: clamp(0.48rem, 0.44rem + 0.18vw, 0.7rem);
+        }
+
+        .nav-actions .btn-call {
+            padding-inline: clamp(0.85rem, 0.55rem + 0.85vw, 1.4rem);
+        }
+
+        .nav-actions .btn-whatsapp {
+            padding-inline: clamp(0.8rem, 0.58rem + 0.62vw, 1.15rem);
+        }
+
+        .nav-actions .btn-email {
+            padding-inline: clamp(0.8rem, 0.58rem + 0.62vw, 1.15rem);
+        }
+
+        /* Fluid desktop nav scaling */
+        .nav-menu {
+            gap: clamp(0.9rem, 2.2vw, 3.5rem);
+            min-width: 0;
+        }
+        .nav-links {
+            gap: clamp(0.65rem, 1.9vw, 3.5rem);
+            min-width: 0;
+        }
+        .nav-links a {
+            font-size: clamp(0.82rem, 0.77rem + 0.16vw, 0.95rem);
+            white-space: nowrap;
+        }
+
+        .nav-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: var(--text-dark);
+            margin: 5px 0;
+            border-radius: 999px;
+            transition: all var(--transition);
+        }
+
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.85rem clamp(1rem, 5vw, 2rem) 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb [aria-current="page"] {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .page-hero {
+            padding: clamp(2.2rem, 6vw, 3.8rem) clamp(1rem, 5vw, 3rem);
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2rem, 6vw, 3.7rem);
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            letter-spacing: -0.7px;
+        }
+
+        .page-hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            max-width: 760px;
+            margin: 0 auto 1.3rem;
+            opacity: 0.95;
+        }
+
+        .hero-actions {
+            display: inline-flex;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .work-section {
+            padding: var(--section-padding) clamp(1rem, 5vw, 3rem);
+            background-color: var(--bg-gray);
+        }
+
+        .work-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.9rem;
+        }
+
+        .work-card {
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .work-card img {
+            width: 100%;
+            height: clamp(210px, 28vw, 330px);
+            object-fit: cover;
+        }
+
+        .quote-strip {
+            padding: 0 clamp(1rem, 5vw, 3rem) var(--section-padding);
+            background-color: var(--bg-gray);
+        }
+
+        .quote-strip-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 1.4rem;
+            text-align: center;
+        }
+
+        .quote-strip-wrap h2 {
+            font-size: clamp(1.35rem, 3vw, 1.9rem);
+            margin-bottom: 0.4rem;
+        }
+
+        .quote-strip-wrap p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .quote-actions {
+            display: inline-flex;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        footer {
+            background-color: var(--text-dark);
+            color: #fff;
+            text-align: center;
+            padding: 2.3rem clamp(1rem, 5vw, 3rem);
+            margin-top: 1.8rem;
+        }
+
+        footer p {
+            margin: 0.4rem 0;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        @media (max-width: 900px) {
+            .nav-toggle { display: block; }
+            .nav-menu { display: none; }
+            .nav-menu.is-open {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--bg-white);
+                border-bottom: 1px solid var(--border-color);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.8rem;
+                padding: 1rem;
+            }
+            .nav-menu.is-open .nav-links {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            .nav-menu.is-open .nav-links a {
+                display: block;
+                padding: 0.6rem 0;
+            }
+            .nav-services-link {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .nav-services-link::after {
+                font-size: 0.8rem;
+            }
+
+            .nav-services-item.is-open .services-submenu {
+                display: grid;
+                gap: 0.1rem;
+                margin: 0.12rem 0 0.35rem;
+                padding: 0.4rem 0 0.15rem 0.8rem;
+                border-left: 2px solid var(--border-color);
+            }
+
+            .services-submenu a {
+                color: var(--text-light);
+                font-size: 0.9rem;
+                padding: 0.45rem 0;
+            }
+
+            .nav-menu.is-open .nav-links > li > a::before {
+                display: none;
+            }
+
+            .nav-menu.is-open .nav-actions {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .nav-menu.is-open .btn-call,
+            .nav-menu.is-open .btn-whatsapp,
+            .nav-menu.is-open .btn-email {
+                width: 100%;
+            }
+            .work-card img {
+                height: 230px;
+            }
+        }
+    
+
+        /* Pre-deployment Responsive Hardening */
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            overflow-x: hidden;
+            overflow-x: clip;
+        }
+
+        nav {
+            gap: clamp(0.45rem, 1vw, 0.9rem);
+        }
+
+        .logo {
+            flex-shrink: 0;
+        }
+
+        .nav-menu {
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+        .nav-actions {
+            flex-shrink: 0;
+        }
+
+        .nav-actions a {
+            white-space: nowrap;
+            touch-action: manipulation;
+        }
+
+        iframe {
+            max-width: 100%;
+        }
+
+        @media (max-width: 1180px) {
+            .nav-links {
+                gap: clamp(0.5rem, 1.35vw, 1.2rem);
+            }
+
+            .nav-actions a {
+                min-height: 36px;
+                font-size: clamp(0.74rem, 0.7rem + 0.15vw, 0.86rem);
+                padding-block: 0.5rem;
+            }
+
+            .nav-actions .phone-button,
+            .nav-actions .whatsapp-button,
+            .nav-actions .email-button,
+            .nav-actions .btn-call,
+            .nav-actions .btn-whatsapp,
+            .nav-actions .btn-email {
+                padding-inline: clamp(0.62rem, 0.45rem + 0.4vw, 0.92rem);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .nav-menu.is-open {
+                max-height: calc(100vh - 72px);
+                max-height: calc(100svh - 72px);
+                overflow-y: auto;
+                overscroll-behavior: contain;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo" aria-label="Williams home"><img src="images-1/williams-main-logo.png" alt="Williams main logo" style="height: clamp(58px, 9vw, 96px); width: auto; display: block; transform: translateY(0); filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));"></a>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="us-in-action.html" aria-current="page">Us in Action</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#testimonials">Reviews</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="index.html#request-quote" class="btn-email btn-quote">Request a Quote</a>
+                    <a href="tel:07565318191" class="btn-call">Call Us</a>
+                    <a href="https://wa.me/447565318191" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+                </div>
+            </div>
+            <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> / <span aria-current="page">Us in Action</span>
+    </div>
+
+    <section class="page-hero">
+        <h1>Us in Action</h1>
+        <p>Real on-site photos from our exterior cleaning jobs across Gateshead, Newcastle, and surrounding areas.</p>
+        <div class="hero-actions">
+            <a href="index.html#request-quote" class="btn-email btn-quote">Request a Quote</a>
+        </div>
+    </section>
+
+    <section class="work-section">
+        <div class="work-grid" aria-label="Us in action photo gallery">
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/494661980_1153554486788320_550548862945482748_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/496146884_1163290389148063_530883411506701044_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/497707163_1163263852484050_2734741518638421098_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/497880083_1165202415623527_1255867730495863012_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/506651050_1186210880189347_7163971009171626432_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/608514474_1355332536610513_3687739193997680484_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/633208492_1388863189924114_8444761507394305690_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/633749242_1388863133257453_6474614609136311284_n-2.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/633749242_1388863133257453_6474614609136311284_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/633864821_1388862753257491_1410306201617524916_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/633996734_1388862189924214_2341149514208163666_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/634097409_1391067679703665_5978022784548408064_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/634349844_1391881939622239_3489091725720196681_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/634691290_1388862929924140_2542587275163307596_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/634785124_1388862129924220_4964685340060512622_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/634918937_1388862303257536_6955835536544608459_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/634963055_1391882569622176_4958965436134520074_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/635114433_1391882612955505_2143247726469930038_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/635498659_1391881896288910_2626546176937626567_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/650656202_1412426140901152_3003749909799747110_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/650792459_1412426087567824_5214077335636269327_n.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/IMG_0148.JPG" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/img-0148.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/photo-2025-10-13-11-27-22-2.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/photo-2025-10-13-11-35-57.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/photo-2025-10-13-11-35-58-3.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/photo-2025-10-13-11-35-58-4.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+            <article class="work-card">
+                <img src="images-2/doing-the-actual-work-examples/softwashing1.jpg" alt="Williams exterior cleaning in action" loading="lazy">
+            </article>
+        </div>
+    </section>
+
+    <section class="quote-strip">
+        <div class="quote-strip-wrap">
+            <h2>Request a Quote</h2>
+            <p>Call or email us with your property details and we will get back to you quickly.</p>
+            <div class="quote-actions">
+                <a href="index.html#request-quote" class="btn-email btn-quote">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Williams Window & External Cleaning Services. All rights reserved.</p>
+        <p>Fully Insured | Health & Safety Certified | 20+ Years Experience</p>
+    </footer>
+
+        <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navMenuLinks = document.querySelectorAll('.nav-menu a');
+        const servicesMenuItem = document.querySelector('.nav-services-item');
+        const servicesMenuLink = document.querySelector('.nav-services-link');
+
+        function closeServicesSubmenu() {
+            if (!servicesMenuItem || !servicesMenuLink) {
+                return;
+            }
+            servicesMenuItem.classList.remove('is-open');
+            servicesMenuLink.setAttribute('aria-expanded', 'false');
+        }
+
+        function toggleServicesSubmenu() {
+            if (!servicesMenuItem || !servicesMenuLink) {
+                return;
+            }
+            const isOpen = servicesMenuItem.classList.toggle('is-open');
+            servicesMenuLink.setAttribute('aria-expanded', String(isOpen));
+        }
+
+        function closeNavMenu() {
+            if (!navToggle || !navMenu) {
+                return;
+            }
+            navToggle.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('is-open');
+            closeServicesSubmenu();
+        }
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', String(!isOpen));
+                navMenu.classList.toggle('is-open');
+
+                if (isOpen) {
+                    closeServicesSubmenu();
+                }
+            });
+        }
+
+        navMenuLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                if (link.classList.contains('nav-services-link')) {
+                    if (window.innerWidth <= 900) {
+                        event.preventDefault();
+                        toggleServicesSubmenu();
+                    }
+                    return;
+                }
+
+                if (window.innerWidth <= 900) {
+                    closeNavMenu();
+                }
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!servicesMenuItem || window.innerWidth <= 900) {
+                return;
+            }
+
+            if (!servicesMenuItem.contains(event.target)) {
+                closeServicesSubmenu();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key !== 'Escape') {
+                return;
+            }
+
+            closeServicesSubmenu();
+            if (window.innerWidth <= 900) {
+                closeNavMenu();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                closeNavMenu();
+                closeServicesSubmenu();
+            }
+        });
+    </script>
+</body>
+</html>
