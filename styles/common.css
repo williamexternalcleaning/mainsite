@@ -235,6 +235,53 @@ iframe {
             }
         }
 
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) and (hover: none) and (pointer: coarse) {
+            nav {
+                padding-inline: 0.55rem !important;
+            }
+
+            .logo img {
+                height: 52px !important;
+                width: auto !important;
+            }
+
+            .nav-menu {
+                gap: 0.45rem !important;
+            }
+
+            .nav-links {
+                gap: 0.3rem !important;
+            }
+
+            .nav-links a {
+                font-size: 0.78rem !important;
+            }
+
+            /* Hide Gallery + Reviews on iPad landscape to prevent overlap */
+            .nav-links > li:nth-last-child(-n + 2) {
+                display: none !important;
+            }
+
+            .nav-actions {
+                gap: 0.25rem !important;
+            }
+
+            .nav-actions a {
+                min-height: 34px !important;
+                font-size: 0.68rem !important;
+                padding-block: 0.4rem !important;
+            }
+
+            .nav-actions .phone-button,
+            .nav-actions .whatsapp-button,
+            .nav-actions .email-button,
+            .nav-actions .btn-call,
+            .nav-actions .btn-whatsapp,
+            .nav-actions .btn-email {
+                padding-inline: 0.48rem !important;
+            }
+        }
+
 @media (max-width: 900px) {
             .nav-menu.is-open {
                 max-height: calc(100vh - 72px);
