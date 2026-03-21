@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-:root { --primary-green: #2ecc71; --dark-green: #27ae60; --light-green: #d5f4e6; --text-dark: #1d1d1d; --text-light: #666666; --bg-white: #ffffff; --bg-gray: #f5f5f5; --border-color: #e5e5e5; --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+:root { --primary-green: #1e8449; --dark-green: #156f3a; --light-green: #d5f4e6; --text-dark: #1d1d1d; --text-light: #666666; --text-muted: #6b6b6b; --bg-white: #ffffff; --bg-gray: #f5f5f5; --border-color: #e5e5e5; --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 html { scroll-behavior: smooth; }
 
@@ -66,9 +66,9 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 .phone-button:hover { background-color: var(--dark-green); }
 
 .email-button {
-            background-color: #f59e0b;
+            background-color: #b45309;
             color: #fff;
-            border: 1px solid #f59e0b;
+            border: 1px solid #b45309;
             padding: 0.7rem 1.15rem;
             min-height: 42px;
             display: inline-flex;
@@ -83,8 +83,8 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
         }
 
 .email-button:hover {
-            border-color: #d97706;
-            background-color: #d97706;
+            border-color: #92400e;
+            background-color: #92400e;
             transform: scale(1.05);
         }
 

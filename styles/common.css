@@ -76,9 +76,9 @@
         }
 
 .whatsapp-button {
-            background-color: #25d366;
+            background-color: #0e7a3f;
             color: #fff;
-            border: 1px solid #25d366;
+            border: 1px solid #0e7a3f;
             padding: 0.7rem 1.15rem;
             min-height: 42px;
             display: inline-flex;
@@ -93,8 +93,8 @@
         }
 
 .whatsapp-button:hover {
-            border-color: #1ebe5b;
-            background-color: #1ebe5b;
+            border-color: #0b6836;
+            background-color: #0b6836;
             transform: scale(1.05);
         }
 
@@ -185,15 +185,41 @@ iframe {
             max-width: 100%;
         }
 
-@media (max-width: 1180px) {
+@media (min-width: 901px) and (max-width: 1180px) {
+            nav {
+                padding: 0.5rem clamp(0.6rem, 2.2vw, 1.1rem);
+            }
+
+            .logo img {
+                height: clamp(42px, 6vw, 60px) !important;
+                width: auto !important;
+            }
+
+            .nav-menu {
+                gap: clamp(0.55rem, 1vw, 0.95rem);
+            }
+
             .nav-links {
-                gap: clamp(0.5rem, 1.35vw, 1.2rem);
+                gap: clamp(0.35rem, 0.85vw, 0.7rem);
+            }
+
+            .nav-links a {
+                font-size: clamp(0.78rem, 0.74rem + 0.1vw, 0.84rem);
+            }
+
+            .nav-links a[href$="#gallery"],
+            .nav-links a[href$="#testimonials"] {
+                display: none;
+            }
+
+            .nav-actions {
+                gap: 0.35rem;
             }
 
             .nav-actions a {
-                min-height: 36px;
-                font-size: clamp(0.74rem, 0.7rem + 0.15vw, 0.86rem);
-                padding-block: 0.5rem;
+                min-height: 34px;
+                font-size: clamp(0.7rem, 0.67rem + 0.1vw, 0.8rem);
+                padding-block: 0.42rem;
             }
 
             .nav-actions .phone-button,
@@ -202,7 +228,7 @@ iframe {
             .nav-actions .btn-call,
             .nav-actions .btn-whatsapp,
             .nav-actions .btn-email {
-                padding-inline: clamp(0.62rem, 0.45rem + 0.4vw, 0.92rem);
+                padding-inline: clamp(0.5rem, 0.36rem + 0.2vw, 0.72rem);
             }
         }
 
