@@ -50,14 +50,15 @@
             }
         }
     </script>
-        <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/common.min.css">
+    <link rel="stylesheet" href="styles/index.min.css">
+    <link rel="preload" as="image" href="images-1/williams-main-logo.webp" fetchpriority="high">
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav>
-            <a href="index.html" class="logo" aria-label="Williams home"><img src="images-1/williams-main-logo.webp" alt="Williams main logo" style="height: clamp(58px, 9vw, 96px); width: auto; display: block; transform: translateY(0); filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));"></a>
+            <a href="index.html" class="logo" aria-label="Williams home"><img src="images-1/williams-main-logo-nav.webp" alt="Williams main logo" style="height: clamp(58px, 9vw, 96px); width: auto; display: block; transform: translateY(0); filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));"></a>
             <div class="nav-menu">
                 <ul class="nav-links">
                     <li><a href="index.html" aria-current="page">Home</a></li>
@@ -89,7 +90,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1 class="hero-title-logo-wrap">
-                <img src="images-1/williams-main-logo.webp" alt="Williams Window & External Cleaning Services logo" class="hero-title-logo">
+                <img src="images-1/williams-main-logo.webp" alt="Williams Window & External Cleaning Services logo" class="hero-title-logo" width="1520" height="1012" fetchpriority="high">
             </h1>
             <p>Professional window and external cleaning for homes and businesses. Trusted by over 1,000 customers across the region.</p>
         </div>
@@ -270,8 +271,8 @@
             <div class="gallery-item">
                 <div class="before-after-container">
                     <div class="before-after-wrapper">
-                        <img class="before-img" src="images-2/doing-the-actual-work-examples/july-2026/julydtwbefore1.webp" alt="Roof covered in moss and lichen before cleaning">
-                        <img class="after-img" src="images-2/doing-the-actual-work-examples/july-2026/julydtwafter1.webp" alt="Clean red tiled roof after moss removal">
+                        <img class="before-img" src="images-2/doing-the-actual-work-examples/july-2026/julydtwbefore1.webp" alt="Roof covered in moss and lichen before cleaning" loading="lazy" decoding="async">
+                        <img class="after-img" src="images-2/doing-the-actual-work-examples/july-2026/julydtwafter1.webp" alt="Clean red tiled roof after moss removal" loading="lazy" decoding="async">
                         <div class="before-after-slider" data-slider="0"></div>
                         <div class="before-after-handle" data-slider="0"></div>
                         <span class="before-label">Before</span>
@@ -284,8 +285,8 @@
             <div class="gallery-item">
                 <div class="before-after-container">
                     <div class="before-after-wrapper">
-                        <img class="before-img" src="images-2/doing-the-actual-work-examples/july-2026/julydtwbefore2.webp" alt="Dirty patio slabs with moss and algae before cleaning">
-                        <img class="after-img" src="images-2/doing-the-actual-work-examples/july-2026/julydtwafter2.webp" alt="Restored patio slabs after pressure washing">
+                        <img class="before-img" src="images-2/doing-the-actual-work-examples/july-2026/julydtwbefore2.webp" alt="Dirty patio slabs with moss and algae before cleaning" loading="lazy" decoding="async">
+                        <img class="after-img" src="images-2/doing-the-actual-work-examples/july-2026/julydtwafter2.webp" alt="Restored patio slabs after pressure washing" loading="lazy" decoding="async">
                         <div class="before-after-slider" data-slider="1"></div>
                         <div class="before-after-handle" data-slider="1"></div>
                         <span class="before-label">Before</span>
@@ -298,8 +299,8 @@
             <div class="gallery-item">
                 <div class="before-after-container">
                     <div class="before-after-wrapper">
-                        <img class="before-img" src="images-2/patio-cleaning/patio2-before.webp" alt="Before patio cleaning">
-                        <img class="after-img" src="images-2/patio-cleaning/patio2-after.webp" alt="After patio cleaning">
+                        <img class="before-img" src="images-2/patio-cleaning/patio2-before.webp" alt="Before patio cleaning" loading="lazy" decoding="async">
+                        <img class="after-img" src="images-2/patio-cleaning/patio2-after.webp" alt="After patio cleaning" loading="lazy" decoding="async">
                         <div class="before-after-slider" data-slider="2"></div>
                         <div class="before-after-handle" data-slider="2"></div>
                         <span class="before-label">Before</span>
@@ -312,8 +313,8 @@
             <div class="gallery-item">
                 <div class="before-after-container">
                     <div class="before-after-wrapper">
-                        <img class="before-img" src="images-2/render-cleaning/render-before1.webp" alt="Before render cleaning">
-                        <img class="after-img" src="images-2/render-cleaning/render-after1.webp" alt="After render cleaning">
+                        <img class="before-img" src="images-2/render-cleaning/render-before1.webp" alt="Before render cleaning" loading="lazy" decoding="async">
+                        <img class="after-img" src="images-2/render-cleaning/render-after1.webp" alt="After render cleaning" loading="lazy" decoding="async">
                         <div class="before-after-slider" data-slider="3"></div>
                         <div class="before-after-handle" data-slider="3"></div>
                         <span class="before-label">Before</span>
@@ -326,8 +327,8 @@
             <div class="gallery-item">
                 <div class="before-after-container">
                     <div class="before-after-wrapper">
-                        <img class="before-img" src="images-1/roof/r1-before.webp" alt="Before roof cleaning">
-                        <img class="after-img" src="images-1/roof/r1-after.webp" alt="After roof cleaning">
+                        <img class="before-img" src="images-1/roof/r1-before.webp" alt="Before roof cleaning" loading="lazy" decoding="async">
+                        <img class="after-img" src="images-1/roof/r1-after.webp" alt="After roof cleaning" loading="lazy" decoding="async">
                         <div class="before-after-slider" data-slider="4"></div>
                         <div class="before-after-handle" data-slider="4"></div>
                         <span class="before-label">Before</span>
@@ -340,8 +341,8 @@
             <div class="gallery-item">
                 <div class="before-after-container">
                     <div class="before-after-wrapper">
-                        <img class="before-img" src="images-2/drain-unblocking/drain1-before.webp" alt="Before drain unblocking">
-                        <img class="after-img" src="images-2/drain-unblocking/drain1-after.webp" alt="After drain unblocking">
+                        <img class="before-img" src="images-2/drain-unblocking/drain1-before.webp" alt="Before drain unblocking" loading="lazy" decoding="async">
+                        <img class="after-img" src="images-2/drain-unblocking/drain1-after.webp" alt="After drain unblocking" loading="lazy" decoding="async">
                         <div class="before-after-slider" data-slider="5"></div>
                         <div class="before-after-handle" data-slider="5"></div>
                         <span class="before-label">Before</span>
@@ -354,8 +355,8 @@
             <div class="gallery-item">
                 <div class="before-after-container">
                     <div class="before-after-wrapper">
-                        <img class="before-img" src="images-1/gutter/gutter1-before.webp" alt="Before gutter clearance">
-                        <img class="after-img" src="images-1/gutter/gutter1-after.webp" alt="After gutter clearance">
+                        <img class="before-img" src="images-1/gutter/gutter1-before.webp" alt="Before gutter clearance" loading="lazy" decoding="async">
+                        <img class="after-img" src="images-1/gutter/gutter1-after.webp" alt="After gutter clearance" loading="lazy" decoding="async">
                         <div class="before-after-slider" data-slider="6"></div>
                         <div class="before-after-handle" data-slider="6"></div>
                         <span class="before-label">Before</span>
